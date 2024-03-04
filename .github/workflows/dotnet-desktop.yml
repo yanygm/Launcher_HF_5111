@@ -7,7 +7,9 @@ on:
     branches: [ "master" ]
 
 jobs:
+
   build:
+
     strategy:
       matrix:
         configuration: [Release]
@@ -58,4 +60,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Launcher.exe
-        path: D:\a\Launcher_HF_5111\Launcher_HF_5111
+        path: D:\a\Launcher_HF_5111\Launcher_HF_5111\Launcher.exe
