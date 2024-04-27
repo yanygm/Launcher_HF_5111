@@ -241,6 +241,7 @@ namespace KartRider
 					}
 					string str = this.profilePath;
 					string[] text2 = new string[] { "<?xml version='1.0' encoding='UTF-16'?>\r\n<profile>\r\n<username>", SetRider.UserID, "</username>\r\n</profile>" };
+					File.WriteAllText(str, string.Concat(text2));
 					ProcessStartInfo startInfo = new ProcessStartInfo(Launcher.KartRider, "-profile:launcher")
 					{
 					    WorkingDirectory = this.kartRiderDirectory,
