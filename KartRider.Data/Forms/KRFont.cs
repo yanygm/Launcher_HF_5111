@@ -32,6 +32,25 @@ namespace KartRider
 					Console.WriteLine($"保存字体文件时出现异常: {ex.Message}");
 				}
 			}
+			try
+			{
+				using (RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts", true))
+				{
+					if (key != null)
+					{
+						key.SetValue("Gulim & GulimChe & Dotum & DotumChe (TrueType)", fontPath);
+						Console.WriteLine($"已在注册表中添加字体。");
+					}
+					else
+					{
+						Console.WriteLine("无法打开或创建字体相关的注册表键。");
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine($"在注册表中添加字体信息时出现异常: {ex.Message}");
+			}
 			LoadFont(fontPath);
 		}
 
