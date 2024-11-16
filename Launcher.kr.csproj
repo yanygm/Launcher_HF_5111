@@ -56,10 +56,10 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1.ico</ApplicationIcon>
+    <ApplicationIcon>Properties\1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>LauncherFile</RootNamespace>
+    <RootNamespace>Launcher</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Data" />
@@ -89,14 +89,9 @@
     <Compile Include="KartRider.Common\KartRider\IO\PacketReadException.cs" />
     <Compile Include="KartRider.Data\EventBuyCount.cs" />
     <Compile Include="KartRider.Data\ExcData\SpeedPatch.cs" />
+    <Compile Include="KartRider.Data\Forms\KRFont.cs" />
     <Compile Include="KartRider.Data\Forms\Launcher.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KartRider.Data\Forms\Options.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KartRider.Data\Forms\Options.designer.cs">
-      <DependentUpon>Options.cs</DependentUpon>
     </Compile>
     <Compile Include="KartRider.Data\GameDataReset.cs" />
     <Compile Include="KartRider.Data\GameType.cs" />
@@ -113,16 +108,8 @@
     <Compile Include="KartRider.Data\Set_Data\FileName.cs" />
     <Compile Include="KartRider.Data\Set_Data\StartingLoad_ALL.cs" />
     <Compile Include="KartRider.Data\TestServer.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="KartRider.Data\Forms\GetKart.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KartRider.Data\Forms\GetKart.Designer.cs">
-      <DependentUpon>GetKart.cs</DependentUpon>
     </Compile>
     <Compile Include="KartRider.Data\ExcData\KartExcData.cs" />
     <Compile Include="KartRider.Data\LauncherSystem.cs" />
@@ -130,10 +117,6 @@
     <Compile Include="KartRider.Data\Rider\RiderSchool.cs" />
     <Compile Include="KartRider.Data\Rider\FavoriteItem.cs" />
     <Compile Include="KartRider.Data\Rider\NewRider.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <AutoGen>false</AutoGen>
-      <DesignTimeSharedInput>false</DesignTimeSharedInput>
-    </Compile>
     <Compile Include="KartRider.Data\ExcData\TuneSpec.cs" />
     <Compile Include="KartRider.Data\Set_Data\SetGameOption.cs" />
     <Compile Include="KartRider.Data\Set_Data\SetGameData.cs" />
@@ -157,19 +140,15 @@
       <AutoGen>false</AutoGen>
       <DesignTimeSharedInput>false</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KartRider.Data\Forms\GetKart.resx">
-      <DependentUpon>GetKart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KartRider.Data\Forms\Launcher.resx">
-      <DependentUpon>Launcher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KartRider.Data\Forms\Options.resx">
-      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +158,7 @@
     <None Include="Properties\NewKart.xml" />
     <None Include="Properties\KartSpec.xml" />
     <None Include="Properties\Item.xml" />
+    <None Include="Properties\gulim.ttc" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -193,7 +173,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.ico" />
+    <Content Include="Properties\1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

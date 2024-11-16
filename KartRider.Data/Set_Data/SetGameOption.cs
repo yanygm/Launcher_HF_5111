@@ -5,7 +5,7 @@ namespace Set_Data
 {
 	public static class SetGameOption
 	{
-		public static ushort Version = 5111;
+		public static ushort Version;
 		public static float Set_BGM = 1f;
 		public static float Set_Sound = 1f;
 		public static byte Main_BGM = 0;
@@ -33,7 +33,7 @@ namespace Set_Data
 		public static byte Unk15 = 1;
 		public static byte Unk16 = 1;
 		public static byte Unk17 = 1;
-		public static byte Set_screen = 1;
+		public static byte Set_screen = 0;
 		public static byte Unk18 = 0;
 
 		public static void Save_SetGameOption()

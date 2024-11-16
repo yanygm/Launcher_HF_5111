@@ -192,71 +192,34 @@ namespace KartRider
 		{
 			//questGroupIndex='2' seasonId='17' kartPassSetId='1' unk='0' id='13'
 			//EX) 217010013
-			int NormalQuest = 27;
-			int KartPassQuest = 14;
+			int NormalQuest = 4;
+			int KartPassQuest = 0;
 			int All_Quest = NormalQuest + KartPassQuest;
 			using (OutPacket outPacket = new OutPacket("PrQuestUX2ndPacket"))
 			{
 				outPacket.WriteInt(1);
 				outPacket.WriteInt(1);
+				outPacket.WriteInt(0);
+				/*
+				outPacket.WriteInt(1);
+				outPacket.WriteInt(1);
 				outPacket.WriteInt(All_Quest);
-				for (int i = 1169; i <= 1195; i++)
+				for (int i = 1372; i <= 1378; i++)
 				{
-					outPacket.WriteInt(i);
-					outPacket.WriteInt(i);
-					outPacket.WriteInt(0);
-					outPacket.WriteInt(0);
-					outPacket.WriteInt(0);
-					outPacket.WriteInt(0);
-					outPacket.WriteInt(2);
-					outPacket.WriteInt(0);
-					outPacket.WriteByte(0);
+					if (i == 1372 || i == 1376 || i == 1377 || i == 1378)
+					{
+						outPacket.WriteInt(i);
+						outPacket.WriteInt(i);
+						outPacket.WriteInt(0);
+						outPacket.WriteInt(0);
+						outPacket.WriteInt(0);
+						outPacket.WriteInt(0);
+						outPacket.WriteInt(2);
+						outPacket.WriteInt(0);
+						outPacket.WriteByte(0);
+					}
 				}
-				//questGroupIndex='1'
-				outPacket.WriteInt(116001001);
-				outPacket.WriteInt(116001001);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(116001002);
-				outPacket.WriteInt(116001002);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(116001003);
-				outPacket.WriteInt(116001003);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				//questGroupIndex = '2'
-				outPacket.WriteInt(216010013);
-				outPacket.WriteInt(216010013);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(216020017);
-				outPacket.WriteInt(216020017);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(216030022);
-				outPacket.WriteInt(216030022);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(216040016);
-				outPacket.WriteInt(216040016);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				//questGroupIndex='3'
-				outPacket.WriteInt(316010001);
-				outPacket.WriteInt(316010001);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316020002);
-				outPacket.WriteInt(316020002);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316030003);
-				outPacket.WriteInt(316030003);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316040004);
-				outPacket.WriteInt(316040004);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316050005);
-				outPacket.WriteInt(316050005);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316060006);
-				outPacket.WriteInt(316060006);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
-				outPacket.WriteInt(316070007);
-				outPacket.WriteInt(316070007);
-				outPacket.WriteHexString("00 00 00 00 FF FF 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00");
+				*/
 				RouterListener.MySession.Client.Send(outPacket);
 			}
 		}
