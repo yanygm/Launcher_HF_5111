@@ -117,7 +117,8 @@ namespace KartRider
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = System.Drawing.SystemColors.Control;
 			ClientSize = new System.Drawing.Size(257, 180);
-			Controls.Add(comboBox1);
+			Controls.Add(Speed_comboBox);
+			Controls.Add(Speed_label);
 			Controls.Add(MinorVersion);
 			Controls.Add(label_DeveloperName);
 			Controls.Add(GetKart_Button);
